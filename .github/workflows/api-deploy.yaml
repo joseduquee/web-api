@@ -38,5 +38,6 @@ jobs:
         run: |
           docker build -f MasterNet.Dockerfile \
             -t $ACR_REGISTRY/netapp:$IMAGE_TAG \
-            -t $ACR_REGISTRY/netapp:latest .
+            -t $ACR_REGISTRY/netapp:latest \
+            .
           docker push $ACR_REGISTRY/netapp --all-tags
